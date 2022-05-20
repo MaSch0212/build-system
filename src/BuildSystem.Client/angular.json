@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "host": "apps/host",
+    "host-e2e": "apps/host-e2e"
+  }
+}

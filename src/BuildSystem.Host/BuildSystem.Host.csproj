@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  
+  <PropertyGroup>
+    <TargetFramework>$(MainTfm)</TargetFramework>
+    <SignAssembly>False</SignAssembly>
+    <ImplicitUsings>true</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\BuildSystem.Business\BuildSystem.Business.csproj" />
+    <ProjectReference Include="..\BuildSystem.Data\BuildSystem.Data.csproj" />
+    <ProjectReference Include="..\BuildSystem.Endpoints\BuildSystem.Endpoints.csproj" />
+  </ItemGroup>
+  
+</Project>

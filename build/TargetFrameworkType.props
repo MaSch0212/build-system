@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup Condition="$(TargetFrameworkType) == ''">
+    <TargetFrameworkType Condition="$(TargetFramework) == 'net48'">NETFRAMEWORK</TargetFrameworkType>
+    <TargetFrameworkType Condition="$(TargetFramework.StartsWith('netstandard'))">NETSTANDARD</TargetFrameworkType>
+    <TargetFrameworkType Condition="$(TargetFramework.StartsWith('netcoreapp'))">NETCORE</TargetFrameworkType>
+    <TargetFrameworkType Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(TargetFramework), 'net[1-9]+\.'))">NET</TargetFrameworkType>
+  </PropertyGroup>
+</Project>

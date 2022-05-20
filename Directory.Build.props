@@ -1,0 +1,29 @@
+﻿<Project>
+  
+  <!-- Paths -->
+  <PropertyGroup>
+    <GitRootDir>$(MSBuildThisFileDirectory)</GitRootDir>
+    <GitBuildDir>$(GitRootDir)build/</GitBuildDir>
+    <GitSourceDir>$(GitRootDir)src/</GitSourceDir>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <MainTfm>net6.0</MainTfm>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    
+    <OutputPath>$(GitRootDir)bin/$(Configuration)/</OutputPath>
+
+    <Authors>Marc Schmidt</Authors>
+    <Copyright>Copyright © Marc Schmidt $([System.DateTime]::Now.Year)</Copyright>
+    <Version>0.0.1</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MaSch0212/build-system</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CompilerVisibleProperty Include="ProjectDir" />
+    <CompilerVisibleProperty Include="RootNamespace" />
+  </ItemGroup>
+  
+</Project>

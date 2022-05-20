@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "src\\BuildSystem.Client"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			"node_modules": true,
+			".vscode": true,
+			"decorate-angular-cli.js": true,
+			"yarn.lock": true,
+			"**/.browserslistrc": true,
+			"**/.eslintrc.json": true,
+			"**/jest.config.js": true,
+			"*/**/tsconfig*.json": true,
+			"**/.gitkeep": true
+		}
+	}
+}

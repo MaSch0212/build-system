@@ -1,0 +1,55 @@
+﻿<Project>
+  
+  <!-- Imports -->
+  <Import Project="$(MSBuildThisFileDirectory)build/GlobalUsings.props" />
+  <Import Project="$(GitRootDir)build/TargetFrameworkType.props" />
+  
+  
+  <!-- Common properties -->
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(GitRootDir)build/BuildSystem.ruleset</CodeAnalysisRuleSet>
+    <NoWarn Condition="$(TargetFrameworkType) == 'NETFRAMEWORK' or $(TargetFrameworkType) == 'NETSTANDARD' ">$(NoWarn);8600;8601;8602;8603;8604;8777;8767</NoWarn>
+  </PropertyGroup>
+  
+  <!-- Analyzers -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SonarAnalyzer.CSharp" Condition="$(IsTestProject) != 'true'">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ReflectionAnalyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="IDisposableAnalyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="$(GitRootDir)build/stylecop.json" Link="stylecop.json" Visible="false" />
+  </ItemGroup>
+  
+
+  <!-- Test Projects -->
+  <PropertyGroup Condition=" $(IsTestProject) == 'true' ">
+    <IsPackable>false</IsPackable>
+    <CodeAnalysisRuleSet>$(GitRootDir)build/BuildSystem.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup Condition=" $(IsTestProject) == 'true' ">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="MSTest.TestAdapter" />
+    <PackageReference Include="MSTest.TestFramework" />
+    <PackageReference Include="Moq" />
+    <PackageReference Include="MaSch.Test.MSTest" />
+  </ItemGroup>
+  
+</Project>

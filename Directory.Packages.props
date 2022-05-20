@@ -1,0 +1,29 @@
+﻿<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <EnablePackageVersionOverride>false</EnablePackageVersionOverride>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageVersion Include="FastEndpoints" Version="4.2.0" />
+    <PackageVersion Include="IDisposableAnalyzers" Version="4.0.2" />
+    <PackageVersion Include="MaSch.Console.Cli" Version="0.4.4" />
+    <PackageVersion Include="MaSch.Test.MSTest" Version="0.5.6" />
+    <PackageVersion Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.5" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.FileProviders.Abstractions" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.FileProviders.Physical" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.FileSystemGlobbing" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Primitives" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageVersion Include="Moq" Version="4.17.2" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="2.2.8" />
+    <PackageVersion Include="MSTest.TestFramework" Version="2.2.8" />
+    <PackageVersion Include="ReflectionAnalyzers" Version="0.3.1" />
+    <PackageVersion Include="SonarAnalyzer.CSharp" Version="8.39.0.47922" />
+    <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.406" />
+    <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+</Project>
